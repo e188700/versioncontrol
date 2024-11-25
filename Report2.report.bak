@@ -1,0 +1,118 @@
+{
+    XMLMD5: "b28722b6abd4814985cc339cec46565b"
+    XMLBlocks: {
+        XML: "<blocks>
+  <objects linkstatus = \"correct\">
+    <object bottom = \"1700\" left = \"2550\" name = \"Import\" right = \"3400\" selected = \"0\" top = \"850\" type = \"Import\">
+      <connections/>
+      <persistence amdatasource = \"\" amdatatable = \"\" columns = \"3\" comment = \"\" dataline = \"2\" dateformat = \"?\" debug_category = \"\" debug_enabled = \"1\" debug_level = \"1\" dynamic = \"0\" headerline = \"1\" import_flags = \"1292\" manual-synopsis = \"0\" manual-tooltip = \"0\" model = \"300works\" repository = \"\" sep = \"44\" type = \"xml\" url = \"1.xlsx?startRow=2\">
+        <column0 flags = \"0\" newname = \"macro_a\" oldname = \"macro_a\" retyped = \"0\" type = \"0\" width = \"6\"/>
+        <column1 flags = \"0\" newname = \"macro_b\" oldname = \"macro_b\" retyped = \"0\" type = \"0\" width = \"6\"/>
+        <column2 flags = \"0\" newname = \"c\" oldname = \"c\" retyped = \"0\" type = \"0\" width = \"6\"/>
+      </persistence>
+    </object>
+    <object bottom = \"1700\" left = \"6375\" name = \"Table\" right = \"7225\" selected = \"0\" top = \"850\" type = \"Table\">
+      <connections>
+        <connection block = \"Import\" ordinal = \"0\"/>
+      </connections>
+      <persistence additionalflags = \"4131\" animate = \"0\" comment = \"\" debug_category = \"\" debug_enabled = \"1\" debug_level = \"1\" fixedschema = \"0\" fixedschemasolution = \"\" fixedschematable = \"\" manual-synopsis = \"0\" manual-tooltip = \"0\" model = \"300works\" repository = \"\" type = \"xml\">
+        <columns>
+          <expression expr = \"c\" name = \"c\"/>
+          <expression expr = \"macro_a\" name = \"macro_a\"/>
+          <expression expr = \"macro_b\" name = \"macro_b\"/>
+        </columns>
+        <footers/>
+        <fixedschemamapping/>
+      </persistence>
+    </object>
+  </objects>
+  <additionalobjects>
+    <groups/>
+  </additionalobjects>
+  <formatter layout_type = \"16\" model = \"300works\">
+    <documentation>
+      <docentry key = \"Author\" value = \"e188700\"/>
+      <docentry key = \"LastModifiedTime\" value = \"25%2F11%2F2024 07:42:00.259374Z\"/>
+      <docentry key = \"LastModifiedTool\" value = \"Test Manager\"/>
+      <docentry key = \"Org\" value = \"Applied Materials\"/>
+      <docentry key = \"LastModifiedHost\" value = \"20WNA03PC2DRECD\"/>
+      <docentry key = \"LastModified\" value = \"e188700\"/>
+      <docentry key = \"LastModifiedVersion\" value = \"9.7.1.8239\"/>
+    </documentation>
+  </formatter>
+  <environments/>
+  <gridsettings>
+    <values gridX = \"1300\" gridY = \"1300\" saveSettings = \"0\"/>
+  </gridsettings>
+</blocks>"
+    } 
+    CompileTypes: {
+        SequentialEngine: 1
+        PreferredTarget: "SequentialEngine"
+    } 
+    BookMarks: "<Bookmarks/>"
+    EngineCode: "
+Start:
+	profile 0 \"Import\"
+
+Block0:
+	ctab 0 3
+	profile 1 \"Import\"
+	ccol 0 0 Scalar Integer
+	ccol 0 1 Scalar Integer
+	ccol 0 2 Scalar Integer
+	import_table_extended_cols 0 \"$APFMODELROOT/1.xlsx?startRow=2\" ',' 2 \"III\" 3 0 0 0 3 0 1 2
+	profile 2 \"Table\"
+	print_table 0 -1 3 2 0 1
+	export_graph 0
+	dcol 0 2
+	dcol 0 0
+	dcol 0 1
+	dtab 0
+	suspend
+
+
+
+End:
+	return
+
+
+"
+    Description: {
+        Constants: ( )
+        ConstantsParameterFiles: ( )
+        EngineCodeVersion: "4"
+        EngineCodeTargetVersion: ""
+        Footers: ( )
+        FormatterOptimisationFlags: ""
+        FormatterOptimisationFlagsUsed: "abcdefghIJklmnopqrStuvWxyz"
+        FormatterVersion: "9.7.1.8239"
+        FormatterArch: "x86_64 (64 bit)"
+        NumberOfProfiles: 3
+        Queries: ( {
+            GraphType: 0
+            Headings: ( "c" "macro_a" "macro_b" )
+            Formats: ( "" "" "" )
+            Types: ( 0 0 0 )
+            Temporal: ( 0 0 0 )
+            UseFooters: ( 0 0 0 )
+            LegendTypes: ( )
+            LegendTypes2: ( )
+            EngineData: {
+                Cols: ( 2 0 1 )
+                TableNumber: 0
+                BlockName: "Table"
+                LegendCols: ( )
+                LegendCols2: ( )
+            } 
+        }  )
+        AllowedActions: ""
+        Resources_Environments: ( "__quint_xml_formatter__" )
+        Resources_ImportFiles: ( "$APFMODELROOT/1.xlsx?startRow=2" )
+        Resources_Macros: ( )
+        Resources_SQL: ( )
+        Resources_DatabaseTypes: ( )
+        Repositories: ( )
+    } 
+    ProfileMapping: "<MacroMapping/>"
+}
