@@ -1,21 +1,21 @@
 {
-    XMLMD5: "b219102e1a94e4411741f9154bce8a00"
+    XMLMD5: "72e8c8b912c22936476ddd3a6400fe99"
     XMLBlocks: {
         XML: "<blocks>
   <objects linkstatus = \"correct\">
-    <object bottom = \"1700\" left = \"3400\" name = \"Data\" right = \"4250\" selected = \"0\" top = \"850\" type = \"Data\">
+    <object bottom = \"1275\" left = \"425\" name = \"Data\" right = \"1275\" selected = \"0\" top = \"425\" type = \"Data\">
       <connections/>
-      <persistence cols = \"1\" comment = \"\" constant = \"\" debug_category = \"\" debug_enabled = \"1\" debug_level = \"1\" format = \"CSV\" manual-synopsis = \"0\" manual-tooltip = \"0\" model = \"300works\" repository = \"\" rows = \"2\" type = \"xml\">
-        <column0 expression = \"\" flags = \"2\" name = \"A\" type = \"3\"/>
+      <persistence cols = \"1\" comment = \"\" constant = \"\" debug_category = \"\" debug_enabled = \"1\" debug_level = \"1\" format = \"CSV\" manual-synopsis = \"0\" manual-tooltip = \"0\" model = \"300works\" repository = \"\" rows = \"1\" type = \"xml\">
+        <column0 expression = \"\" flags = \"2\" name = \"B\" type = \"3\"/>
       </persistence>
     </object>
-    <object bottom = \"1700\" left = \"5950\" name = \"Table\" right = \"6800\" selected = \"0\" top = \"850\" type = \"Table\">
+    <object bottom = \"1700\" left = \"2975\" name = \"Table\" right = \"3825\" selected = \"0\" top = \"850\" type = \"Table\">
       <connections>
         <connection block = \"Data\" ordinal = \"0\"/>
       </connections>
       <persistence additionalflags = \"4131\" animate = \"0\" comment = \"\" debug_category = \"\" debug_enabled = \"1\" debug_level = \"1\" fixedschema = \"0\" fixedschemasolution = \"\" fixedschematable = \"\" manual-synopsis = \"0\" manual-tooltip = \"0\" model = \"300works\" repository = \"\" type = \"xml\">
         <columns>
-          <expression expr = \"A\" name = \"A\"/>
+          <expression expr = \"B\" name = \"B\"/>
         </columns>
         <footers/>
         <fixedschemamapping/>
@@ -28,7 +28,7 @@
   <formatter layout_type = \"16\" model = \"300works\">
     <documentation>
       <docentry key = \"Author\" value = \"e188700\"/>
-      <docentry key = \"LastModifiedTime\" value = \"25%2F11%2F2024 07:23:15.618593Z\"/>
+      <docentry key = \"LastModifiedTime\" value = \"25%2F11%2F2024 07:34:12.90479Z\"/>
       <docentry key = \"LastModifiedTool\" value = \"Test Manager\"/>
       <docentry key = \"Org\" value = \"Applied Materials\"/>
       <docentry key = \"LastModifiedHost\" value = \"20WNA03PC2DRECD\"/>
@@ -43,7 +43,7 @@
 </blocks>"
     } 
     MetaData: {
-        _QBDATA_Data_A: "<coldata xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:apf_table=\"http://www.autosim.com\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><name/><headings SOAP-ENC:arrayType=\"xsd:string[1]\"><heading>A</heading></headings><columns><column SOAP-ENC:arrayType=\"xsd:string[2]\"><i>0</i><i>1</i></column></columns><tokenisedstring>1</tokenisedstring><stringtable><s idx=\"0\">a</s><s idx=\"1\">b</s></stringtable></coldata>"
+        _QBDATA_Data_B: "<coldata xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:apf_table=\"http://www.autosim.com\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><name/><headings SOAP-ENC:arrayType=\"xsd:string[1]\"><heading>B</heading></headings><columns><column SOAP-ENC:arrayType=\"xsd:string[1]\"><i>0</i></column></columns><tokenisedstring>1</tokenisedstring><stringtable><s idx=\"0\">b</s></stringtable></coldata>"
     } 
     CompileTypes: {
         SequentialEngine: 1
@@ -63,7 +63,7 @@
         NumberOfProfiles: 3
         Queries: ( {
             GraphType: 0
-            Headings: ( "A" )
+            Headings: ( "B" )
             Formats: ( "" )
             Types: ( 6 )
             Temporal: ( 0 )
@@ -92,10 +92,10 @@ Start:
 
 Block0:
 	ctab 0 1
-	construct_data_table 0 2
+	construct_data_table 0 1
 	profile 1 \"Data\"
 	ccol 0 0 Scalar String
-	data_column 0 0 \"_QBDATA_Data_A\" 0
+	data_column 0 0 \"_QBDATA_Data_B\" 0
 	profile 2 \"Table\"
 	print_table 0 -1 1 0
 	export_graph 0
