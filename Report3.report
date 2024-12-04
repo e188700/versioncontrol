@@ -1,5 +1,21 @@
 {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     XMLMD5: "d0a66acc3726913633fc7c7ecb0280dc"
+=======
+    XMLMD5: "1b7e2d6d83cab2b96e60e316b9dbc92d"
+>>>>>>> Stashed changes
+=======
+    XMLMD5: "1b7e2d6d83cab2b96e60e316b9dbc92d"
+>>>>>>> Stashed changes
+=======
+    XMLMD5: "1b7e2d6d83cab2b96e60e316b9dbc92d"
+>>>>>>> Stashed changes
+=======
+    XMLMD5: "1b7e2d6d83cab2b96e60e316b9dbc92d"
+>>>>>>> Stashed changes
     XMLBlocks: {
         XML: "<blocks>
   <objects linkstatus = \"correct\"/>
@@ -8,8 +24,15 @@
   </additionalobjects>
   <formatter layout_type = \"16\" model = \"\">
     <documentation>
+<<<<<<< Updated upstream
       <docentry key = \"LastModifiedTime\" value = \"04%2F12%2F2024 06:37:15.857091Z\"/>
       <docentry key = \"LastModifiedTool\" value = \"APFFormatter\"/>
+=======
+      <docentry key = \"Author\" value = \"e188700\"/>
+      <docentry key = \"LastModifiedTime\" value = \"04%2F12%2F2024 03:01:34.575401Z\"/>
+      <docentry key = \"LastModifiedTool\" value = \"Test Manager\"/>
+      <docentry key = \"Org\" value = \"Applied Materials\"/>
+>>>>>>> Stashed changes
       <docentry key = \"LastModifiedHost\" value = \"20WNA03PC2DRECD\"/>
       <docentry key = \"LastModified\" value = \"e188700\"/>
       <docentry key = \"LastModifiedVersion\" value = \"9.7.1.8239\"/>
