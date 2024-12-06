@@ -1,21 +1,25 @@
 {
-    XMLMD5: "924796cce17ef6032c9452c55f13eee3"
+    XMLMD5: "edebba6ecc36c347bce9d591a0682fb8"
     XMLBlocks: {
         XML: "<blocks>
   <objects linkstatus = \"correct\">
-    <object bottom = \"2125\" left = \"2975\" name = \"Data\" right = \"3825\" selected = \"0\" top = \"1275\" type = \"Data\">
+    <object bottom = \"1700\" left = \"2550\" name = \"Import\" right = \"3400\" selected = \"0\" top = \"850\" type = \"Import\">
       <connections/>
-      <persistence cols = \"1\" comment = \"\" constant = \"\" debug_category = \"\" debug_enabled = \"1\" debug_level = \"1\" format = \"CSV\" manual-synopsis = \"0\" manual-tooltip = \"0\" model = \"300works\" repository = \"\" rows = \"1\" type = \"xml\">
-        <column0 expression = \"\" flags = \"2\" name = \"C\" type = \"3\"/>
+      <persistence amdatasource = \"\" amdatatable = \"\" columns = \"3\" comment = \"\" dataline = \"2\" dateformat = \"?\" debug_category = \"\" debug_enabled = \"1\" debug_level = \"1\" dynamic = \"0\" headerline = \"1\" import_flags = \"1292\" manual-synopsis = \"0\" manual-tooltip = \"0\" model = \"300works\" repository = \"\" sep = \"44\" type = \"xml\" url = \"2.xlsx?startRow=2\">
+        <column0 flags = \"0\" newname = \"macro_a\" oldname = \"macro_a\" retyped = \"0\" type = \"0\" width = \"6\"/>
+        <column1 flags = \"0\" newname = \"macro_b\" oldname = \"macro_b\" retyped = \"0\" type = \"0\" width = \"6\"/>
+        <column2 flags = \"0\" newname = \"macro_c\" oldname = \"macro_c\" retyped = \"0\" type = \"0\" width = \"6\"/>
       </persistence>
     </object>
-    <object bottom = \"2125\" left = \"5100\" name = \"Table\" right = \"5950\" selected = \"0\" top = \"1275\" type = \"Table\">
+    <object bottom = \"1700\" left = \"6375\" name = \"Table\" right = \"7225\" selected = \"0\" top = \"850\" type = \"Table\">
       <connections>
-        <connection block = \"Data\" ordinal = \"0\"/>
+        <connection block = \"Import\" ordinal = \"0\"/>
       </connections>
       <persistence additionalflags = \"4131\" animate = \"0\" comment = \"\" debug_category = \"\" debug_enabled = \"1\" debug_level = \"1\" fixedschema = \"0\" fixedschemasolution = \"\" fixedschematable = \"\" manual-synopsis = \"0\" manual-tooltip = \"0\" model = \"300works\" repository = \"\" type = \"xml\">
         <columns>
-          <expression expr = \"C\" name = \"C\"/>
+          <expression expr = \"macro_a\" name = \"macro_a\"/>
+          <expression expr = \"macro_b\" name = \"macro_b\"/>
+          <expression expr = \"macro_c\" name = \"macro_c\"/>
         </columns>
         <footers/>
         <fixedschemamapping/>
@@ -28,7 +32,7 @@
   <formatter layout_type = \"16\" model = \"300works\">
     <documentation>
       <docentry key = \"Author\" value = \"e188700\"/>
-      <docentry key = \"LastModifiedTime\" value = \"05%2F12%2F2024 08:55:07.857635Z\"/>
+      <docentry key = \"LastModifiedTime\" value = \"04%2F12%2F2024 02:32:28.427232Z\"/>
       <docentry key = \"LastModifiedTool\" value = \"Test Manager\"/>
       <docentry key = \"Org\" value = \"Applied Materials\"/>
       <docentry key = \"LastModifiedHost\" value = \"20WNA03PC2DRECD\"/>
@@ -41,9 +45,6 @@
     <values gridX = \"1300\" gridY = \"1300\" saveSettings = \"0\"/>
   </gridsettings>
 </blocks>"
-    } 
-    MetaData: {
-        _QBDATA_Data_C: "<coldata xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:apf_table=\"http://www.autosim.com\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><name/><headings SOAP-ENC:arrayType=\"xsd:string[1]\"><heading>C</heading></headings><columns><column SOAP-ENC:arrayType=\"xsd:string[1]\"><i>0</i></column></columns><tokenisedstring>1</tokenisedstring><stringtable><s idx=\"0\">C</s></stringtable></coldata>"
     } 
     CompileTypes: {
         SequentialEngine: 1
@@ -63,15 +64,15 @@
         NumberOfProfiles: 3
         Queries: ( {
             GraphType: 0
-            Headings: ( "C" )
-            Formats: ( "" )
-            Types: ( 6 )
-            Temporal: ( 0 )
-            UseFooters: ( 0 )
+            Headings: ( "macro_a" "macro_b" "macro_c" )
+            Formats: ( "" "" "" )
+            Types: ( 0 0 0 )
+            Temporal: ( 0 0 0 )
+            UseFooters: ( 0 0 0 )
             LegendTypes: ( )
             LegendTypes2: ( )
             EngineData: {
-                Cols: ( 0 )
+                Cols: ( 0 1 2 )
                 TableNumber: 0
                 BlockName: "Table"
                 LegendCols: ( )
@@ -80,7 +81,7 @@
         }  )
         AllowedActions: ""
         Resources_Environments: ( "__quint_xml_formatter__" )
-        Resources_ImportFiles: ( )
+        Resources_ImportFiles: ( "$APFMODELROOT/2.xlsx?startRow=2" )
         Resources_Macros: ( )
         Resources_SQL: ( )
         Resources_DatabaseTypes: ( )
@@ -88,18 +89,21 @@
     } 
     EngineCode: "
 Start:
-	profile 0 \"Data\"
+	profile 0 \"Import\"
 
 Block0:
-	ctab 0 1
-	construct_data_table 0 1
-	profile 1 \"Data\"
-	ccol 0 0 Scalar String
-	data_column 0 0 \"_QBDATA_Data_C\" 0
+	ctab 0 3
+	profile 1 \"Import\"
+	ccol 0 0 Scalar Integer
+	ccol 0 1 Scalar Integer
+	ccol 0 2 Scalar Integer
+	import_table_extended_cols 0 \"$APFMODELROOT/2.xlsx?startRow=2\" ',' 2 \"III\" 3 0 0 0 3 0 1 2
 	profile 2 \"Table\"
-	print_table 0 -1 1 0
+	print_table 0 -1 3 0 1 2
 	export_graph 0
 	dcol 0 0
+	dcol 0 1
+	dcol 0 2
 	dtab 0
 	suspend
 
